@@ -16,7 +16,7 @@ def atoi(text):
     return int(text) if text.isdigit() else text
 
 def natural_keys(text):
-    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
+    return [ atoi(c) for c in re.split(r"(\d+)", text) ]
 
 images = sorted(glob.glob(images_dir_path + "*"), key=natural_keys)
 
@@ -41,5 +41,5 @@ os.makedirs(save_dir_path, exist_ok=True)
 for i in hashes.values():
 	shutil.copy(images_dir_path + i, save_dir_path)
 
-with open('./output.json', 'w') as f:
+with open("./output.json", "w") as f:
     json.dump(flames, f, indent=4)
