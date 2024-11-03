@@ -6,7 +6,7 @@ import cv2
 fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 video = cv2.VideoWriter('output.mp4',fourcc, 25.0, (480, 360))
 
-with open('./☆ゲッダン☆.json') as f:
+with open('./☆ゲッダン☆.json', 'r') as f:
 	images_list = json.load(f)
 
 	for i in images_list:
